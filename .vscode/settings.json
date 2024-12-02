@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "U5T3_JavaDocs"
+        "U5T3_JavaDocs",
+        "U5T6_ObjRef"
     ]
 }
