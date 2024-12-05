@@ -51,7 +51,7 @@ public class Temperature {
         if (tempNum == 2) {
             if(tempType == "F" || tempType == "f") {
                 if (temp2Type == "F" || temp2Type == "f") {
-                    temp2 = add(temp2, increaseVal);    //C
+                    temp2 = add(temp2, increaseVal);    
                 } else if (temp2Type == "C" || temp2Type == "c") {
                     temp2 = Utility.celsiusToFahrenheit(temp2);
                     temp2 = add(temp2, increaseVal);
@@ -86,5 +86,33 @@ public class Temperature {
         return (fahrenheit - 32) * (5.0/9.0);
     }
 
+    public void randomInfo() {
+        int temp1 = (int) (Math.random() * 100) + 1;
+        int temp2 = (int) (Math.random() * 100) + 1;
+        String temp1Type;
+        String temp2Type;
+        if ((int) (Math.random() * 2) + 1 == 1) {
+            temp1Type = "F";
+        } else {
+            temp1Type = "C";
+        }
+        if ((int) (Math.random() * 2) + 1 == 1) {
+            temp2Type = "F";
+        } else {
+            temp2Type = "C";
+        }
+        Temperature temp = new Temperature(temp1, temp1Type, temp2, temp2Type);
+        System.out.println(temp.compareTemps());
+        System.out.println("The positive celsius difference is: " + temp.posCelDiff());
+        System.out.println("Temperature 1 is: " + temp1 + temp1Type);
+        System.out.println("Temperature 2 is: " + temp2 + temp2Type);
+        if (temp1Type == "C") {
+            System.out.println("Temperature 1 in Fahrenheit is: " + Utility.celsiusToFahrenheit(temp1) + "F");
+        }
+        if (temp2Type == "C") {
+            System.out.println("Temperature 2 in Fahrenheit is: " + Utility.celsiusToFahrenheit(temp2) + "F");
+        }
+
+    }
 
 }

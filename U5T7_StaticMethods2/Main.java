@@ -7,6 +7,6 @@ public class Main {
         temp.increaseTemp(2, 20, "F");
         System.out.println(temp.compareTemps());
         System.out.println(temp.posCelDiff());
-
+        temp.randomInfo();
     }
 }
