@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "U5T7_StaticMethods2"
+        "U5T7_StaticMethods2",
+        "U5T7_StaticVariables"
     ]
 }
